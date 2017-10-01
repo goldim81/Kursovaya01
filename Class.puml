@@ -1,0 +1,45 @@
+@startuml
+
+class User {
+    int id
+    String firstName
+    String secondName
+    String otchestvo
+    Date birthday
+    Date dateRegister
+    boolean pol
+    String email
+    String password
+    String tel
+    int role
+    boolean block
+    Theme theme
+    ..Getters..
+    get()
+    ..Setters..
+    set()
+}
+
+class Theme {
+    Int id
+    String name
+    Set<Material> materials
+    addMaterial(Material material)
+}
+
+class Material {
+    int id
+    String text
+    boolean finish
+}
+
+class Users {
+    Set<User> users
+}
+
+class Calendar{
+}
+User --> Users
+Material --> Theme
+
+@enduml
